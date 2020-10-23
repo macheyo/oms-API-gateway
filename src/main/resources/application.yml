@@ -48,3 +48,11 @@ microservice:
     endpoints:
       make-order:
         uri: http://PAY
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: https://order-mgmt-service-registry.herokuapp.com/eureka/
+  instance:
+    hostname: localhost
