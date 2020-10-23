@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      uri:
+        - https://order-mgmt-config-svr.herokuapp.com
