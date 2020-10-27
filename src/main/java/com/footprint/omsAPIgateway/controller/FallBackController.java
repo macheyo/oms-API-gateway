@@ -15,4 +15,8 @@ public class FallBackController {
     public Mono<String> paymentServiceFallBack(){
         return Mono.just("Payment Service is taking too long to respond or is unavailable, Please contact the system administrator");
     }
+    @RequestMapping("/organisationFallback")
+    public Mono<String> organisationServiceFallBack(){
+        return Mono.just("Organisation Service is taking too long to respond or is unavailable, Please contact the system administrator");
+    }
 }
