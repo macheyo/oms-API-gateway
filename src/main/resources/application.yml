@@ -25,7 +25,7 @@ spring:
                 name: payment-service
                 fallbackuri: forward:/paymentFallback
         - id: organisation-mgmt-service
-          uri: lb://ORGANISATION-MGMT-SERVICE
+          uri: lb://ORGANISATION-MANAGEMENT-SERVICE
           predicates:
             - Path=/organisation/**
           filters:
