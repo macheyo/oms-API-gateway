@@ -24,10 +24,16 @@ spring:
               args:
                 name: payment-service
                 fallbackuri: forward:/paymentFallback
-        - id: organisation-mgmt-service
+        - id: organisation-management-service
           uri: lb://ORGANISATION-MANAGEMENT-SERVICE
           predicates:
             - Path=/organisation/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: organisation-management-service
+                fallbackuri: forward:/organisationFallback
+
 management:
   endpoints:
     web:
