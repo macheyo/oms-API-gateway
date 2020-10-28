@@ -1,5 +1,3 @@
-server:
-  port: ${PORT:8792}
 spring:
   application:
     name: api-gateway-service
