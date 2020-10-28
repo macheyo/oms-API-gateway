@@ -28,11 +28,6 @@ spring:
           uri: lb://ORGANISATION-MANAGEMENT-SERVICE
           predicates:
             - Path=/organisation/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: organisation-mgmt-service
-                fallbackuri: forward:/organisationFallback
 management:
   endpoints:
     web:
@@ -61,6 +56,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: https://order-mgmt-service-registry.herokuapp.com/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
